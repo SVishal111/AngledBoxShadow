@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+:root {
+    --bg-color: #e1e1e1;
+    --content-box: #fff;
+    --btn1: #3d3544;
+    --btn2: #00d0e4;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--bg-color);
+    position: relative;
+    z-index: 1;
+    /* background-color: none; */
+}
+
+.loremContainer {
+    width: 992px;
+    aspect-ratio: 16/9;
+
+    background-color: blue;
+}
+
+.loremBox {
+    height: 85%;
+    width: 100%;
+    background-color: var(--content-box);
+}
+
+.loremButtons {
+    height: 15.1%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    height: 100%;
+    width: 50%;
+    background-color: chartreuse;
+}
+
+.btn1 {
+    background-color: var(--btn1);
+    position: relative;
+}
+
+.btn1::before {
+    position: absolute;
+    content: "";
+    display: block;
+    box-shadow: -20px 25px 8px rgba(0, 0, 0, 0.4);
+    /* transform: rotate(-3deg); */
+    transform: skewY(-3deg);
+    transform-origin: left;
+    height: 100%;
+    width: 94%;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+}
+
+.btn2 {
+    background-color: var(--btn2);
+    position: relative;
+}
+
+.btn2::before {
+    position: absolute;
+    content: "";
+    display: block;
+    box-shadow: 20px 25px 8px rgba(0, 0, 0, 0.4);
+    /* transform: rotate(-3deg); */
+    transform: skewY(3deg);
+    transform-origin: right;
+    height: 100%;
+    width:94%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
